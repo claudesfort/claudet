@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Kismet AI | Serendipitous Intelligence</title>
-    <meta name="description" content="Kismet AI brings fortunate, gentle intelligence to your world. Serendipitous insights, warm automation, and ethical AI that feels like destiny.">
-    <meta name="keywords" content="serendipity AI, kismet, gentle intelligence, peach AI, warm technology">
-    <meta name="author" content="Kismet Labs">
+    <title>Whisper AI | Soft Intelligence That Listens</title>
+    <meta name="description" content="Whisper AI brings soft, listening intelligence to your world. Gentle, intuitive, and beautifully human — like a quiet whisper in the wind.">
+    <meta name="keywords" content="whisper AI, soft listen, gentle intelligence, peach warmth, ethical AI">
+    <meta name="author" content="Whisper Labs">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -17,44 +17,43 @@
         }
 
         body {
-            font-family: 'Sora', sans-serif;
-            background: #fef7f0;
-            color: #3e2a1c;
+            font-family: 'Inter', sans-serif;
+            background: #fefaf7;
+            color: #3d2b1d;
             line-height: 1.5;
             scroll-behavior: smooth;
         }
 
         :root {
-            --peach-milk: #ffede1;
-            --peach-silk: #ffddcc;
-            --peach-whisper: #ffc9ae;
-            --coral-mist: #f09d6e;
-            --crimson-warm: #c45a32;
-            --shadow-fate: 0 12px 30px rgba(196, 90, 50, 0.05);
-            --glow-fate: 0 0 24px rgba(240, 157, 110, 0.28);
-            --curve-card: 32px;
+            --whisper-light: #fff0e8;
+            --whisper-soft: #ffe0cc;
+            --whisper-glow: #ffccae;
+            --whisper-warm: #f5a06b;
+            --whisper-deep: #c45a2e;
+            --shadow-soft: 0 12px 28px rgba(196, 90, 46, 0.05);
+            --glow-soft: 0 0 28px rgba(245, 160, 107, 0.28);
+            --radius-card: 32px;
         }
 
-        /* Wavy pattern overlay - unique for this site */
-        .wave-pattern {
+        /* Wind pattern - unique */
+        .wind-pattern {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             pointer-events: none;
-            background-image: repeating-linear-gradient(90deg, rgba(255, 205, 188, 0.06) 0px, rgba(255, 205, 188, 0.06) 1px, transparent 1px, transparent 60px);
+            background-image: repeating-linear-gradient(80deg, rgba(255, 204, 174, 0.05) 0px, rgba(255, 204, 174, 0.05) 1px, transparent 1px, transparent 26px);
             z-index: 0;
         }
-
-        .wave-pattern::after {
+        .wind-pattern::after {
             content: '';
             position: absolute;
-            top: 20%;
+            top: 0;
             left: 0;
             width: 100%;
-            height: 40%;
-            background: repeating-linear-gradient(45deg, rgba(240, 157, 110, 0.03) 0px, rgba(240, 157, 110, 0.03) 2px, transparent 2px, transparent 20px);
+            height: 100%;
+            background: repeating-linear-gradient(170deg, rgba(245, 160, 107, 0.04) 0px, rgba(245, 160, 107, 0.04) 1px, transparent 1px, transparent 26px);
             pointer-events: none;
         }
 
@@ -68,12 +67,12 @@
 
         /* Navigation */
         .navbar {
-            background: rgba(254, 247, 240, 0.94);
+            background: rgba(254, 250, 247, 0.94);
             backdrop-filter: blur(14px);
             position: sticky;
             top: 0;
             z-index: 101;
-            border-bottom: 1px solid var(--peach-silk);
+            border-bottom: 1px solid var(--whisper-soft);
         }
 
         .nav-wrapper {
@@ -88,11 +87,11 @@
         .logo {
             font-size: 2rem;
             font-weight: 800;
-            background: linear-gradient(125deg, #c45a32, #f09d6e);
+            background: linear-gradient(125deg, #c45a2e, #f5a06b);
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
-            letter-spacing: -0.02em;
+            letter-spacing: -0.01em;
         }
 
         .nav-links {
@@ -110,29 +109,32 @@
         }
 
         .nav-links a:hover {
-            color: var(--crimson-warm);
+            color: var(--whisper-deep);
         }
 
-        .btn-kismet {
-            background: linear-gradient(115deg, var(--crimson-warm), var(--coral-mist));
+        .btn-whisper {
+            background: linear-gradient(115deg, var(--whisper-deep), var(--whisper-warm));
             padding: 0.5rem 1.6rem;
             border-radius: 50px;
             color: white;
             font-weight: 600;
             text-decoration: none;
             transition: 0.2s;
-            box-shadow: 0 2px 8px rgba(196, 90, 50, 0.12);
+            box-shadow: 0 2px 8px rgba(196, 90, 46, 0.12);
+            display: inline-block;
+            cursor: pointer;
+            border: none;
         }
 
-        .btn-kismet:hover {
+        .btn-whisper:hover {
             transform: translateY(-2px);
-            box-shadow: 0 6px 14px rgba(196, 90, 50, 0.2);
+            box-shadow: 0 6px 14px rgba(196, 90, 46, 0.2);
         }
 
-        /* Hero with unique blob shapes */
+        /* Hero */
         .hero {
             padding: 5rem 0 6rem;
-            background: radial-gradient(ellipse at 30% 35%, var(--peach-whisper) 0%, var(--peach-milk) 45%, #fef7f0 100%);
+            background: radial-gradient(ellipse at 40% 35%, var(--whisper-glow) 0%, var(--whisper-light) 45%, #fefaf7 100%);
             position: relative;
             overflow: hidden;
         }
@@ -140,26 +142,12 @@
         .hero::before {
             content: '';
             position: absolute;
-            top: -20%;
-            left: -10%;
-            width: 70%;
-            height: 70%;
-            background: radial-gradient(circle, rgba(240, 157, 110, 0.12), transparent 70%);
-            border-radius: 60% 40% 50% 50%;
-            filter: blur(40px);
-            pointer-events: none;
-        }
-
-        .hero::after {
-            content: '';
-            position: absolute;
-            bottom: -15%;
+            top: -10%;
             right: -5%;
-            width: 60%;
-            height: 60%;
-            background: radial-gradient(circle, rgba(196, 90, 50, 0.08), transparent 70%);
-            border-radius: 40% 60% 50% 50%;
-            filter: blur(35px);
+            width: 55%;
+            height: 55%;
+            background: radial-gradient(circle, rgba(245, 160, 107, 0.1), transparent 70%);
+            filter: blur(42px);
             pointer-events: none;
         }
 
@@ -172,232 +160,234 @@
             z-index: 2;
         }
 
-        .hero-content {
+        .hero-text {
             flex: 1;
         }
 
         .hero-tag {
-            background: rgba(196, 90, 50, 0.1);
-            border: 1px solid var(--peach-silk);
-            border-radius: 60px;
-            padding: 0.3rem 1.1rem;
+            background: rgba(196, 90, 46, 0.1);
+            border: 1px solid var(--whisper-soft);
+            border-radius: 50px;
+            padding: 0.3rem 1rem;
             display: inline-block;
             font-weight: 500;
             font-size: 0.75rem;
-            color: var(--crimson-warm);
+            color: var(--whisper-deep);
             margin-bottom: 1.5rem;
-            backdrop-filter: blur(4px);
         }
 
-        .hero-content h1 {
+        .hero-text h1 {
             font-size: 3.6rem;
             font-weight: 800;
             line-height: 1.2;
-            letter-spacing: -0.01em;
-            color: #3e2a1c;
             margin-bottom: 1.2rem;
+            color: #3d2b1d;
         }
 
-        .fate-text {
-            background: linear-gradient(135deg, var(--crimson-warm), var(--coral-mist));
+        .whisper-word {
+            background: linear-gradient(135deg, var(--whisper-deep), var(--whisper-warm));
             -webkit-background-clip: text;
             background-clip: text;
             color: transparent;
         }
 
-        .hero-content p {
+        .hero-text p {
             font-size: 1.2rem;
             color: #9a735b;
             max-width: 90%;
             margin-bottom: 2rem;
         }
 
-        .hero-numbers {
+        .hero-stats {
             display: flex;
             gap: 2rem;
             margin-top: 2rem;
         }
 
-        .number-item h3 {
+        .stat-item h3 {
             font-size: 1.8rem;
             font-weight: 800;
-            color: var(--crimson-warm);
+            color: var(--whisper-deep);
         }
 
-        .hero-graphic {
+        .hero-visual {
             flex: 1;
             text-align: center;
             background: rgba(255, 242, 234, 0.55);
             backdrop-filter: blur(8px);
-            border-radius: 48px;
+            border-radius: 56px;
             padding: 1.5rem;
-            box-shadow: var(--shadow-fate);
-            border: 1px solid var(--peach-silk);
+            box-shadow: var(--shadow-soft);
+            border: 1px solid var(--whisper-soft);
         }
 
-        .btn-primary-fate {
-            background: linear-gradient(115deg, var(--crimson-warm), var(--coral-mist));
+        .btn-primary {
+            background: linear-gradient(115deg, var(--whisper-deep), var(--whisper-warm));
             padding: 0.9rem 2.2rem;
             border-radius: 50px;
             color: white;
-            font-weight: 700;
+            font-weight: 600;
             display: inline-block;
             text-decoration: none;
             transition: 0.2s;
-            box-shadow: var(--shadow-fate);
+            box-shadow: var(--shadow-soft);
+            cursor: pointer;
+            border: none;
         }
 
-        .btn-primary-fate:hover {
+        .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 22px rgba(196, 90, 50, 0.2);
+            box-shadow: 0 10px 22px rgba(196, 90, 46, 0.2);
         }
 
         section {
             padding: 5rem 0;
         }
 
-        .section-title {
+        .section-header {
             text-align: center;
             margin-bottom: 3rem;
         }
 
-        .section-title h2 {
+        .section-header h2 {
             font-size: 2.4rem;
             font-weight: 800;
-            color: #3e2a1c;
+            color: #3d2b1d;
             margin-bottom: 0.6rem;
         }
 
-        .section-title p {
+        .section-header p {
             color: #9a735b;
             max-width: 580px;
             margin: 0 auto;
         }
 
-        /* Staggered cards */
-        .stagger-grid {
+        /* Cards */
+        .cards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
 
-        .fate-card {
-            background: rgba(255, 242, 234, 0.75);
-            backdrop-filter: blur(6px);
-            border-radius: var(--curve-card);
+        .whisper-card {
+            background: rgba(255, 242, 234, 0.7);
+            backdrop-filter: blur(4px);
+            border-radius: var(--radius-card);
             padding: 2rem 1.8rem;
-            border: 1px solid var(--peach-silk);
+            border: 1px solid var(--whisper-soft);
             transition: all 0.3s ease;
-            box-shadow: var(--shadow-fate);
+            box-shadow: var(--shadow-soft);
+            cursor: pointer;
         }
 
-        .fate-card:hover {
-            transform: translateY(-7px) rotate(0.5deg);
-            border-color: var(--peach-whisper);
-            box-shadow: var(--glow-fate);
-            background: rgba(255, 245, 238, 0.9);
+        .whisper-card:hover {
+            transform: translateY(-7px);
+            border-color: var(--whisper-glow);
+            box-shadow: var(--glow-soft);
+            background: rgba(255, 248, 242, 0.92);
         }
 
-        .card-emoji {
+        .card-icon {
             font-size: 2.4rem;
-            margin-bottom: 1.2rem;
+            margin-bottom: 1rem;
         }
 
-        /* Diamond showcase */
-        .diamond-row {
+        /* Listen row */
+        .listen-row {
             display: flex;
             flex-wrap: wrap;
             gap: 2rem;
-            background: var(--peach-milk);
-            border-radius: 48px;
+            background: var(--whisper-light);
+            border-radius: 52px;
             padding: 2.5rem;
-            border: 1px solid var(--peach-silk);
-            box-shadow: var(--shadow-fate);
+            border: 1px solid var(--whisper-soft);
+            box-shadow: var(--shadow-soft);
         }
 
-        .diamond-item {
+        .listen-cell {
             flex: 1;
             text-align: center;
-            padding: 0.8rem;
+            padding: 0.6rem;
         }
 
-        /* Pricing with different shape */
-        .fate-pricing {
+        /* Pricing */
+        .pricing-grid {
             display: flex;
             flex-wrap: wrap;
             gap: 2rem;
             justify-content: center;
         }
 
-        .price-fate {
+        .price-card {
             background: rgba(255, 242, 234, 0.9);
-            border-radius: 28px;
+            border-radius: 32px;
             flex: 1;
             min-width: 270px;
             padding: 2rem;
-            border: 1px solid var(--peach-silk);
+            border: 1px solid var(--whisper-soft);
             transition: 0.25s;
-            box-shadow: var(--shadow-fate);
+            box-shadow: var(--shadow-soft);
         }
 
-        .price-fate.destiny {
-            border-top: 5px solid var(--crimson-warm);
+        .price-card.featured {
+            border-top: 5px solid var(--whisper-deep);
             transform: scale(1.02);
             background: #fffbf7;
-            box-shadow: var(--glow-fate);
+            box-shadow: var(--glow-soft);
         }
 
         .price-number {
             font-size: 2.9rem;
             font-weight: 800;
-            color: var(--crimson-warm);
+            color: var(--whisper-deep);
             margin: 1rem 0;
         }
 
-        .btn-outline-fate {
-            border: 1.5px solid var(--crimson-warm);
+        .btn-outline {
+            border: 1.5px solid var(--whisper-deep);
             padding: 0.7rem 1.8rem;
             border-radius: 50px;
             background: transparent;
-            color: var(--crimson-warm);
+            color: var(--whisper-deep);
             font-weight: 600;
             text-decoration: none;
             display: inline-block;
             transition: 0.2s;
+            cursor: pointer;
         }
 
-        .btn-outline-fate:hover {
-            background: var(--crimson-warm);
+        .btn-outline:hover {
+            background: var(--whisper-deep);
             color: white;
         }
 
-        .cta-fate {
-            background: linear-gradient(125deg, var(--peach-milk), #fff0e6);
-            border-radius: 48px;
+        .cta-section {
+            background: linear-gradient(125deg, var(--whisper-light), #fff0e6);
+            border-radius: 52px;
             text-align: center;
             padding: 3rem;
-            border: 1px solid var(--peach-silk);
-            box-shadow: var(--shadow-fate);
+            border: 1px solid var(--whisper-soft);
+            box-shadow: var(--shadow-soft);
         }
 
-        /* Privacy unique styling */
-        .privacy-fate {
-            background: #fff3ec;
-            border-radius: 36px;
+        /* Privacy */
+        .privacy-section {
+            background: #fff5ef;
+            border-radius: 38px;
             padding: 2.5rem;
             margin: 2rem 0;
-            border: 1px solid var(--peach-silk);
+            border: 1px solid var(--whisper-soft);
             scroll-margin-top: 90px;
-            box-shadow: var(--shadow-fate);
+            box-shadow: var(--shadow-soft);
         }
 
-        .privacy-fate h2, .privacy-fate h3 {
-            color: #3e2a1c;
+        .privacy-section h2, .privacy-section h3 {
+            color: #3d2b1d;
             margin-top: 1.8rem;
-            font-weight: 700;
+            font-weight: 800;
         }
 
-        .privacy-fate p, .privacy-fate li {
+        .privacy-section p, .privacy-section li {
             color: #9a735b;
         }
 
@@ -405,14 +395,14 @@
             background: linear-gradient(115deg, #f0e0d4, #fae8dd);
             color: #b08066;
             padding: 3rem 0 2rem;
-            border-top: 1px solid var(--peach-silk);
+            border-top: 1px solid var(--whisper-soft);
         }
 
-        .go-top {
+        .back-to-top {
             position: fixed;
             bottom: 2rem;
             right: 2rem;
-            background: linear-gradient(115deg, var(--crimson-warm), var(--coral-mist));
+            background: linear-gradient(115deg, var(--whisper-deep), var(--whisper-warm));
             color: white;
             width: 46px;
             height: 46px;
@@ -424,152 +414,196 @@
             opacity: 0.8;
             transition: 0.2s;
             z-index: 99;
-            box-shadow: var(--shadow-fate);
+            box-shadow: var(--shadow-soft);
         }
 
-        .go-top:hover {
+        .back-to-top:hover {
             opacity: 1;
             transform: translateY(-3px);
         }
 
+        /* Modal */
+        .info-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(8px);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .info-modal-content {
+            background: #fffaf5;
+            padding: 2rem;
+            border-radius: 32px;
+            max-width: 380px;
+            text-align: center;
+            border: 1px solid var(--whisper-soft);
+            box-shadow: var(--glow-soft);
+        }
+        .info-modal-content h3 { color: var(--whisper-deep); margin-bottom: 1rem; }
+        .info-modal-content p { color: #8a644c; margin-bottom: 0.5rem; }
+        .info-modal-content button {
+            margin-top: 1.5rem;
+            padding: 0.5rem 1.5rem;
+            background: var(--whisper-deep);
+            color: white;
+            border: none;
+            border-radius: 40px;
+            cursor: pointer;
+        }
+
         @media (max-width: 800px) {
-            .hero-content h1 { font-size: 2.2rem; }
+            .hero-text h1 { font-size: 2.2rem; }
             .nav-wrapper { flex-direction: column; }
-            .section-title h2 { font-size: 1.9rem; }
+            .section-header h2 { font-size: 1.9rem; }
         }
     </style>
 </head>
 <body>
 
-<div class="wave-pattern"></div>
+<div class="wind-pattern"></div>
+
+<div id="demoModal" class="info-modal">
+    <div class="info-modal-content">
+        <i class="fas fa-ear-listen" style="font-size: 3rem; color: #f5a06b;"></i>
+        <h3>Whisper AI</h3>
+        <p>This is a gentle whisper. In a live environment, this would open your listening space.</p>
+        <button onclick="closeModal()">Listen closer</button>
+    </div>
+</div>
 
 <nav class="navbar">
     <div class="container nav-wrapper">
-        <div class="logo">Kismet<span style="color:#f09d6e;">✦</span></div>
+        <div class="logo">Whisper<span style="color:#f5a06b;">🌬️</span></div>
         <div class="nav-links">
-            <a href="#home">Destiny</a>
-            <a href="#gifts">Gifts</a>
-            <a href="#essence">Essence</a>
-            <a href="#pricing">Fate</a>
-            <a href="#privacy">Sacred</a>
-            <a href="#" class="btn-kismet"><i class="fas fa-star"></i> Begin journey</a>
+            <a href="#home">Home</a>
+            <a href="#listen">Listen</a>
+            <a href="#quiet">Quiet</a>
+            <a href="#pricing">Plans</a>
+            <a href="#privacy">Trust</a>
+            <a href="#" class="btn-whisper" onclick="openModal()">Hear whisper</a>
         </div>
     </div>
 </nav>
 
 <main>
-    <!-- Hero -->
     <section id="home" class="hero">
         <div class="container hero-grid">
-            <div class="hero-content">
-                <div class="hero-tag"><i class="fas fa-sparkle"></i> Serendipitous intelligence</div>
-                <h1>Where AI meets <span class="fate-text">beautiful fortune</span></h1>
-                <p>Kismet brings gentle, serendipitous intelligence to your world. Ethical, intuitive, and warmly human — like a lucky encounter with wisdom.</p>
-                <a href="#" class="btn-primary-fate"><i class="fas fa-crystal-ball"></i> Discover your kismet</a>
-                <div class="hero-numbers">
-                    <div class="number-item"><h3>11k+</h3><span>fortunate souls</span></div>
-                    <div class="number-item"><h3>98.6%</h3><span>serendipity</span></div>
-                    <div class="number-item"><h3>always</h3><span>destined</span></div>
+            <div class="hero-text">
+                <div class="hero-tag"><i class="fas fa-ear-listen"></i> Listening intelligence</div>
+                <h1>AI that <span class="whisper-word">listens softly</span> to you</h1>
+                <p>Whisper AI brings soft, listening intelligence to your world. Like a gentle whisper in the wind — ethical, intuitive, and beautifully human.</p>
+                <a href="#" class="btn-primary" onclick="openModal()"><i class="fas fa-heart"></i> Listen to whisper</a>
+                <div class="hero-stats">
+                    <div class="stat-item"><h3>42k+</h3><span>listening souls</span></div>
+                    <div class="stat-item"><h3>4.99★</h3><span>whisper rating</span></div>
+                    <div class="stat-item"><h3>∞</h3><span>gentle ear</span></div>
                 </div>
             </div>
-            <div class="hero-graphic">
+            <div class="hero-visual">
                 <svg width="100%" height="250" viewBox="0 0 500 270" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="500" height="270" rx="36" fill="#FFF5EE" stroke="#FFDDCC" stroke-width="1"/>
-                    <circle cx="170" cy="125" r="45" fill="#FFEDE1" stroke="#F09D6E" stroke-width="1.5"/>
-                    <circle cx="170" cy="125" r="26" fill="#FFC9AE" fill-opacity="0.5"/>
-                    <circle cx="170" cy="125" r="11" fill="#C45A32"/>
-                    <path d="M270 105 L330 135 L270 165 L210 135 Z" fill="#FFDDCC" stroke="#F09D6E" stroke-width="1.5"/>
-                    <circle cx="270" cy="135" r="8" fill="#C45A32" fill-opacity="0.6"/>
-                    <path d="M380 115 L400 140 L380 165 L360 140 Z" fill="#FFC9AE" stroke="#F09D6E" stroke-width="1"/>
-                    <path d="M115 210 L175 210 L145 245 Z" fill="#FFEDE1" stroke="#F09D6E" stroke-width="1"/>
-                    <path d="M315 210 L375 210 L345 245 Z" fill="#FFEDE1" stroke="#F09D6E" stroke-width="1"/>
+                    <rect width="500" height="270" rx="36" fill="#FFF5EE" stroke="#FFE0CC" stroke-width="1"/>
+                    <circle cx="170" cy="125" r="48" fill="#FFEFE2" stroke="#F5A06B" stroke-width="1.5"/>
+                    <circle cx="170" cy="125" r="28" fill="#FFCCAE" fill-opacity="0.5"/>
+                    <circle cx="170" cy="125" r="11" fill="#C45A2E"/>
+                    <path d="M280 105 L340 135 L280 165 L220 135 Z" fill="#FFE0CC" stroke="#F5A06B" stroke-width="1.5"/>
+                    <circle cx="280" cy="135" r="8" fill="#C45A2E" fill-opacity="0.6"/>
+                    <path d="M390 115 L410 140 L390 165 L370 140 Z" fill="#FFCCAE" stroke="#F5A06B" stroke-width="1"/>
+                    <path d="M120 210 L180 210 L150 245 Z" fill="#FFEFE2" stroke="#F5A06B" stroke-width="1"/>
+                    <path d="M320 210 L380 210 L350 245 Z" fill="#FFEFE2" stroke="#F5A06B" stroke-width="1"/>
                 </svg>
             </div>
         </div>
     </section>
 
-    <!-- Gifts / features -->
-    <section id="gifts">
+    <section id="listen">
         <div class="container">
-            <div class="section-title">
-                <h2>Gifts of gentle intelligence</h2>
-                <p>Serendipitous features that feel like destiny</p>
+            <div class="section-header">
+                <h2>Ways whisper listens to you</h2>
+                <p>Gentle features that feel like being truly heard</p>
             </div>
-            <div class="stagger-grid">
-                <div class="fate-card"><div class="card-emoji">🪄</div><h3>Lucky Insights</h3><p>Wisdom that appears exactly when you need it — never overwhelming.</p></div>
-                <div class="fate-card"><div class="card-emoji">💫</div><h3>Destiny Flow</h3><p>Automation that feels magical, working quietly in the background.</p></div>
-                <div class="fate-card"><div class="card-emoji">🌙</div><h3>Gentle Chat</h3><p>Conversations that feel like talking to an old, wise friend.</p></div>
-                <div class="fate-card"><div class="card-emoji">🕊️</div><h3>Ethical Fate</h3><p>Privacy-first, bias-aware, and completely transparent — always.</p></div>
+            <div class="cards-grid">
+                <div class="whisper-card" onclick="openModal()"><div class="card-icon">🌬️</div><h3>Whisper Chat</h3><p>Conversations that feel like soft secrets between trusted friends.</p></div>
+                <div class="whisper-card" onclick="openModal()"><div class="card-icon">✨</div><h3>Listening Insights</h3><p>Beautiful, gentle analytics that arrive like quiet understanding.</p></div>
+                <div class="whisper-card" onclick="openModal()"><div class="card-icon">🍃</div><h3>Gentle Current</h3><p>Automation that moves like a soft breeze — quiet and attentive.</p></div>
+                <div class="whisper-card" onclick="openModal()"><div class="card-icon">🕯️</div><h3>Sacred Ear</h3><p>Privacy-first, bias-aware, and transparent as still air.</p></div>
             </div>
         </div>
     </section>
 
-    <!-- Essence diamond -->
-    <section id="essence">
+    <section id="quiet">
         <div class="container">
-            <div class="diamond-row">
-                <div class="diamond-item"><i class="fas fa-feather-alt" style="font-size: 2rem; color:#c45a32;"></i><h3 style="margin: 1rem 0 0.5rem;">Feather-light</h3><p>Blazing fast</p></div>
-                <div class="diamond-item"><i class="fas fa-language" style="font-size: 2rem; color:#c45a32;"></i><h3 style="margin: 1rem 0 0.5rem;">32 tongues</h3><p>Global destiny</p></div>
-                <div class="diamond-item"><i class="fas fa-shield-heart" style="font-size: 2rem; color:#c45a32;"></i><h3 style="margin: 1rem 0 0.5rem;">Your data, yours</h3><p>Never trained on</p></div>
-                <div class="diamond-item"><i class="fas fa-moon" style="font-size: 2rem; color:#c45a32;"></i><h3 style="margin: 1rem 0 0.5rem;">Always gentle</h3><p>Warm by design</p></div>
+            <div class="listen-row">
+                <div class="listen-cell"><i class="fas fa-feather-alt" style="font-size: 2rem; color:#c45a2e;"></i><h3 style="margin: 1rem 0 0.5rem;">Feather-soft</h3><p>Blazing fast, gentle touch</p></div>
+                <div class="listen-cell"><i class="fas fa-globe" style="font-size: 2rem; color:#c45a2e;"></i><h3 style="margin: 1rem 0 0.5rem;">60 languages</h3><p>Global whisper glow</p></div>
+                <div class="listen-cell"><i class="fas fa-shield-heart" style="font-size: 2rem; color:#c45a2e;"></i><h3 style="margin: 1rem 0 0.5rem;">Yours always</h3><p>Never trained on</p></div>
+                <div class="listen-cell"><i class="fas fa-ear-listen" style="font-size: 2rem; color:#c45a2e;"></i><h3 style="margin: 1rem 0 0.5rem;">Listen by soul</h3><p>Built with empathy</p></div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing fate -->
     <section id="pricing">
         <div class="container">
-            <div class="section-title">
-                <h2>Destined for simplicity</h2>
-                <p>Plans that feel like fortune</p>
+            <div class="section-header">
+                <h2>Quiet plans for every whisper</h2>
+                <p>Pricing as soft as a secret</p>
             </div>
-            <div class="fate-pricing">
-                <div class="price-fate"><h3>Seed</h3><div class="price-number">$0</div><p>100 messages/month, basic magic, community warmth.</p><a href="#" class="btn-outline-fate" style="margin-top:1.5rem; display:inline-block;">Plant seed</a></div>
-                <div class="price-fate destiny"><h3>Blossom <span style="background:#ffddcc; font-size:0.7rem; padding:0.2rem 0.6rem; border-radius:40px;">⭐ Most destined</span></h3><div class="price-number">$20<span style="font-size:1rem;">/mo</span></div><p>Unlimited messages, priority fate, full API access.</p><a href="#" class="btn-primary-fate">Blossom now</a></div>
-                <div class="price-fate"><h3>Eternal</h3><div class="price-number">$44<span style="font-size:1rem;">/mo</span></div><p>Team features, analytics, custom integration.</p><a href="#" class="btn-outline-fate">Reach destiny</a></div>
+            <div class="pricing-grid">
+                <div class="price-card"><h3>Murmur</h3><div class="price-number">$0</div><p>360 messages/month, basic whisper, community quiet.</p>
+                    <a href="#" class="btn-outline" style="margin-top:1.5rem; display:inline-block;" onclick="openModal()">Start murmur</a>
+                </div>
+                <div class="price-card featured"><h3>Whisper <span style="background:#ffe0cc; font-size:0.7rem; padding:0.2rem 0.6rem; border-radius:40px;">🌬️ Most gentle</span></h3><div class="price-number">$6<span style="font-size:1rem;">/mo</span></div><p>Unlimited messages, priority whisper, full API.</p>
+                    <a href="#" class="btn-primary" onclick="openModal()">Hear whisper</a>
+                </div>
+                <div class="price-card"><h3>Silence</h3><div class="price-number">$19<span style="font-size:1rem;">/mo</span></div><p>Team features, analytics, custom quiet.</p>
+                    <a href="#" class="btn-outline" onclick="openModal()">Find silence</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Fate -->
     <div class="container">
-        <div class="cta-fate">
-            <h2 style="font-size: 2rem;">Let serendipity find you</h2>
-            <p style="margin: 1rem 0 2rem; opacity: 0.85;">Join thousands who've discovered fortunate intelligence with Kismet.</p>
-            <a href="#" class="btn-primary-fate"><i class="fas fa-star"></i> Start your destined trial</a>
+        <div class="cta-section">
+            <h2 style="font-size: 2rem;">Let soft whisper listen to your heart</h2>
+            <p style="margin: 1rem 0 2rem; opacity: 0.85;">Join thousands who've found soft, listening intelligence with Whisper.</p>
+            <a href="#" class="btn-primary" onclick="openModal()"><i class="fas fa-ear-listen"></i> Start your whisper trial</a>
         </div>
     </div>
 
-    <!-- Privacy Policy -->
     <div class="container" id="privacy">
-        <div class="privacy-fate">
-            <h2><i class="fas fa-feather" style="color:#f09d6e;"></i> Sacred Trust — Our Kismet Promise</h2>
-            <p><strong>Last woven:</strong> May 2025 | Kismet Labs holds your trust as precious as fate itself.</p>
+        <div class="privacy-section">
+            <h2><i class="fas fa-leaf" style="color:#f5a06b;"></i> Sacred Whisper — Our Listening Vow</h2>
+            <p><strong>Last gentle whisper:</strong> May 2025 | Whisper Labs holds your trust as soft as a secret.</p>
             
             <h3>1. What we gather</h3>
-            <p>Account essence (name, email), conversation threads (encrypted at rest), and gentle usage echoes. You remain the sole owner of your destined light.</p>
+            <p>Account essence, conversation whisper (encrypted at rest), and gentle usage echoes. You remain the sole owner of your quiet light.</p>
             
             <h3>2. How your light is honoured</h3>
             <p>To nurture our AI, personalise your journey, handle billing, and support you. Zero selling. Zero advertising training. Zero dark patterns.</p>
             
-            <h3>3. Keeping your destiny safe</h3>
-            <p>You may delete any conversation instantly. Account data vanishes when you wish. Full radiant export available anytime.</p>
+            <h3>3. Keeping your whisper safe</h3>
+            <p>You may delete any conversation instantly. Account data vanishes when you wish. Full gentle export available anytime.</p>
             
             <h3>4. Trusted guardians</h3>
-            <p>We partner with AWS and Cloudflare under strict data pledges. All data travels encrypted (TLS 1.3) and rests encrypted (AES-256).</p>
+            <p>We partner with secure infrastructure providers under strict data pledges. All data travels encrypted and rests encrypted.</p>
             
-            <h3>5. Your destined rights (GDPR / CCPA)</h3>
-            <p>Access, correct, delete, restrict, or take your data elsewhere. Email <strong>privacy@kismet.ai</strong>. Marketing? Simply say the word to opt out.</p>
+            <h3>5. Your listening rights</h3>
+            <p>Access, correct, delete, restrict, or take your data elsewhere. Our privacy team is always here for you.</p>
             
             <h3>6. Young souls</h3>
-            <p>Kismet is crafted for humans 16 and over. We do not knowingly collect from younger hearts.</p>
+            <p>Whisper is crafted for humans 16 and over. We do not knowingly collect from younger hearts.</p>
             
             <h3>7. Across borders</h3>
             <p>Data may travel the globe under Standard Contractual Clauses — always protected, always respected.</p>
             
-            <h3>8. When fate evolves</h3>
-            <p>Material changes will reach your inbox. Our Data Protection Officer: <strong>dpo@kismet.ai</strong>. Or write: 101 Destiny Way, Portland, OR 97204.</p>
-            <p style="margin-top:1.5rem;"><i class="fas fa-star" style="color:#f09d6e;"></i> Kismet — Intelligence that finds you at the right moment.</p>
+            <h3>8. When whisper evolves</h3>
+            <p>Material changes will be shared with you. Our Data Protection Officer is always available.</p>
+            <p style="margin-top:1.5rem;"><i class="fas fa-ear-listen" style="color:#f5a06b;"></i> Whisper — Intelligence that listens gently to you.</p>
         </div>
     </div>
 </main>
@@ -578,27 +612,56 @@
     <div class="container">
         <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem;">
             <div>
-                <h3 style="color:#3e2a1c;">Kismet<span style="color:#f09d6e;">✦</span></h3>
-                <p style="max-width: 210px; margin-top: 0.5rem;">Serendipitous intelligence for all.</p>
+                <h3 style="color:#3d2b1d;">Whisper<span style="color:#f5a06b;">🌬️</span></h3>
+                <p style="max-width: 210px; margin-top: 0.5rem;">Your gentle ear of wisdom.</p>
                 <div style="margin-top: 1rem;">
-                    <i class="fab fa-twitter" style="margin-right: 1rem;"></i>
-                    <i class="fab fa-instagram" style="margin-right: 1rem;"></i>
-                    <i class="fab fa-mastodon"></i>
+                    <a href="#" onclick="openModal(); return false;" style="color:#b08066; margin-right: 1rem;"><i class="fab fa-twitter"></i></a>
+                    <a href="#" onclick="openModal(); return false;" style="color:#b08066; margin-right: 1rem;"><i class="fab fa-instagram"></i></a>
+                    <a href="#" onclick="openModal(); return false;" style="color:#b08066;"><i class="fab fa-soundcloud"></i></a>
                 </div>
             </div>
-            <div><h4>Destiny</h4><p>Features<br>Pricing<br>API<br>Status</p></div>
-            <div><h4>Resources</h4><p>Journal<br>Guide<br>Community<br>Support</p></div>
-            <div><h4>Sacred</h4><p><a href="#privacy" style="color:#b08066; text-decoration:none;">Privacy Pledge</a><br>Terms of Fate<br>Ethics Charter<br>Security</p></div>
+            <div>
+                <h4>Listen</h4>
+                <p><a href="#listen" style="color:#b08066; text-decoration:none;">Features</a><br>
+                   <a href="#pricing" style="color:#b08066; text-decoration:none;">Pricing</a><br>
+                   <a href="#" onclick="openModal(); return false;" style="color:#b08066;">API</a><br>
+                   <a href="#" onclick="openModal(); return false;" style="color:#b08066;">Status</a></p>
+            </div>
+            <div>
+                <h4>Resources</h4>
+                <p><a href="#" onclick="openModal(); return false;" style="color:#b08066;">Journal</a><br>
+                   <a href="#" onclick="openModal(); return false;" style="color:#b08066;">Guide</a><br>
+                   <a href="#" onclick="openModal(); return false;" style="color:#b08066;">Community</a><br>
+                   <a href="#" onclick="openModal(); return false;" style="color:#b08066;">Support</a></p>
+            </div>
+            <div>
+                <h4>Trust</h4>
+                <p><a href="#privacy" style="color:#b08066; text-decoration:none;">Privacy Vow</a><br>
+                   <a href="#" onclick="openModal(); return false;" style="color:#b08066;">Terms of Whisper</a><br>
+                   <a href="#" onclick="openModal(); return false;" style="color:#b08066;">Ethics Charter</a><br>
+                   <a href="#" onclick="openModal(); return false;" style="color:#b08066;">Security</a></p>
+            </div>
         </div>
-        <div style="text-align: center; padding-top: 2rem; border-top: 1px solid #ffddcc; margin-top: 2rem; font-size: 0.8rem;">
-            © 2025 Kismet Labs — Intelligence woven by destiny.
+        <div style="text-align: center; padding-top: 2rem; border-top: 1px solid #ffe0cc; margin-top: 2rem; font-size: 0.8rem;">
+            <p>© 2025 Whisper Labs — Intelligence that listens gently to you.</p>
+            <p style="margin-top: 0.5rem;">Heard in trust · Whispered in grace</p>
         </div>
     </div>
 </footer>
 
-<a href="#" class="go-top"><i class="fas fa-arrow-up"></i></a>
+<a href="#" class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'}); return false;"><i class="fas fa-arrow-up"></i></a>
 
 <script>
+    function openModal() {
+        document.getElementById('demoModal').style.display = 'flex';
+    }
+    function closeModal() {
+        document.getElementById('demoModal').style.display = 'none';
+    }
+    window.onclick = function(event) {
+        let modal = document.getElementById('demoModal');
+        if (event.target === modal) modal.style.display = 'none';
+    }
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
@@ -609,6 +672,10 @@
                 target.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
         });
+    });
+    document.querySelector('.back-to-top').addEventListener('click', function(e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 </script>
 </body>
