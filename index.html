@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>CoreAI · Enterprise Artificial Intelligence Platform</title>
+    <title>Solara AI · Enterprise Intelligence Platform</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -15,25 +15,28 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: #f4f6fa;
-            color: #1e293b;
+            background: #ffffff;
+            color: #111827;
             line-height: 1.5;
             scroll-behavior: smooth;
         }
 
         :root {
-            --primary: #2563eb;
-            --primary-dark: #1e40af;
-            --primary-soft: #dbeafe;
-            --gray-bg: #f1f5f9;
-            --card-bg: #ffffff;
-            --border-light: #e2e8f0;
-            --text-dark: #0f172a;
-            --text-muted: #475569;
-            --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
-            --shadow-md: 0 4px 12px rgba(0,0,0,0.05);
-            --radius-lg: 20px;
-            --radius-md: 16px;
+            --peach: #f59e0b;
+            --peach-dark: #d97706;
+            --peach-deep: #b45309;
+            --peach-soft: #fde68a;
+            --peach-bg: #fffbeb;
+            --peach-muted: #fef3c7;
+            --gray-bg: #f9fafb;
+            --card-white: #ffffff;
+            --border: #e5e7eb;
+            --text-dark: #111827;
+            --text-muted: #6b7280;
+            --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.06);
+            --radius: 28px;
+            --radius-sm: 18px;
         }
 
         .container {
@@ -44,8 +47,9 @@
 
         /* Navigation */
         .navbar {
-            background: #ffffff;
-            border-bottom: 1px solid var(--border-light);
+            background: rgba(255,255,255,0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border);
             position: sticky;
             top: 0;
             z-index: 100;
@@ -67,7 +71,7 @@
         }
 
         .logo span {
-            color: var(--primary);
+            color: var(--peach);
         }
 
         .nav-links {
@@ -85,43 +89,46 @@
         }
 
         .nav-links a:hover {
-            color: var(--primary);
+            color: var(--peach);
         }
 
         .btn-primary {
-            background: var(--primary);
+            background: var(--peach);
             padding: 0.6rem 1.5rem;
-            border-radius: 40px;
+            border-radius: 100px;
             color: white;
             font-weight: 600;
             text-decoration: none;
             transition: 0.2s;
             border: none;
+            display: inline-block;
         }
 
         .btn-primary:hover {
-            background: var(--primary-dark);
+            background: var(--peach-dark);
+            transform: translateY(-1px);
         }
 
         .btn-outline {
-            border: 1px solid var(--border-light);
+            border: 1px solid var(--border);
             padding: 0.6rem 1.5rem;
-            border-radius: 40px;
+            border-radius: 100px;
             background: white;
             font-weight: 500;
             text-decoration: none;
             color: var(--text-dark);
+            display: inline-block;
         }
 
         .btn-outline:hover {
-            border-color: var(--primary);
-            background: var(--primary-soft);
+            border-color: var(--peach);
+            background: var(--peach-bg);
         }
 
         /* Hero */
         .hero {
             padding: 5rem 0;
-            background: var(--gray-bg);
+            background: linear-gradient(125deg, var(--peach-bg) 0%, #ffffff 65%);
         }
 
         .hero-grid {
@@ -136,9 +143,9 @@
         }
 
         .hero-badge {
-            background: var(--primary-soft);
-            color: var(--primary-dark);
-            border-radius: 40px;
+            background: var(--peach-soft);
+            color: var(--peach-dark);
+            border-radius: 100px;
             padding: 0.25rem 1rem;
             font-size: 0.75rem;
             font-weight: 600;
@@ -153,6 +160,10 @@
             letter-spacing: -0.02em;
             margin-bottom: 1.2rem;
             color: var(--text-dark);
+        }
+
+        .hero-highlight {
+            color: var(--peach);
         }
 
         .hero-content p {
@@ -171,7 +182,7 @@
         .stat-item h3 {
             font-size: 1.6rem;
             font-weight: 700;
-            color: var(--primary);
+            color: var(--peach);
         }
 
         .stat-item span {
@@ -186,7 +197,7 @@
 
         .hero-image img {
             max-width: 100%;
-            border-radius: var(--radius-lg);
+            border-radius: var(--radius);
             background: #e2e8f0;
         }
 
@@ -218,21 +229,22 @@
         }
 
         .feature-card {
-            background: var(--card-bg);
-            border-radius: var(--radius-md);
+            background: var(--card-white);
+            border-radius: var(--radius-sm);
             padding: 1.8rem;
-            border: 1px solid var(--border-light);
+            border: 1px solid var(--border);
             transition: 0.2s;
         }
 
         .feature-card:hover {
+            transform: translateY(-3px);
             box-shadow: var(--shadow-md);
-            border-color: var(--primary-soft);
+            border-color: var(--peach-soft);
         }
 
         .feature-icon {
             font-size: 2rem;
-            color: var(--primary);
+            color: var(--peach);
             margin-bottom: 1rem;
         }
 
@@ -249,31 +261,32 @@
         /* Blog Cards */
         .blog-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 2rem;
         }
 
         .blog-card {
-            background: var(--card-bg);
-            border-radius: var(--radius-md);
+            background: var(--card-white);
+            border-radius: var(--radius-sm);
             overflow: hidden;
-            border: 1px solid var(--border-light);
+            border: 1px solid var(--border);
             transition: 0.2s;
         }
 
         .blog-card:hover {
             transform: translateY(-3px);
             box-shadow: var(--shadow-md);
+            border-color: var(--peach-soft);
         }
 
         .blog-img {
-            background: var(--gray-bg);
+            background: var(--peach-muted);
             height: 160px;
             display: flex;
             align-items: center;
             justify-content: center;
             font-size: 2.5rem;
-            color: var(--primary);
+            color: var(--peach);
         }
 
         .blog-content {
@@ -284,7 +297,8 @@
             font-size: 0.7rem;
             text-transform: uppercase;
             font-weight: 600;
-            color: var(--primary);
+            color: var(--peach);
+            letter-spacing: 0.5px;
         }
 
         .blog-card h3 {
@@ -312,24 +326,24 @@
         }
 
         .pricing-card {
-            background: var(--card-bg);
-            border-radius: var(--radius-lg);
+            background: var(--card-white);
+            border-radius: var(--radius);
             flex: 1;
             min-width: 280px;
             padding: 2rem;
-            border: 1px solid var(--border-light);
+            border: 1px solid var(--border);
             transition: 0.2s;
         }
 
         .pricing-card.featured {
-            border-top: 3px solid var(--primary);
+            border-top: 3px solid var(--peach);
             box-shadow: var(--shadow-md);
         }
 
         .price {
             font-size: 2.8rem;
             font-weight: 700;
-            color: var(--primary);
+            color: var(--peach);
             margin: 1rem 0;
         }
 
@@ -353,68 +367,62 @@
         }
 
         .pricing-card li i {
-            color: var(--primary);
+            color: var(--peach);
             font-size: 0.8rem;
         }
 
         /* CTA */
-        .cta-block {
-            background: var(--dark);
-            border-radius: var(--radius-lg);
-            color: white;
+        .cta-section {
+            background: var(--peach-bg);
+            border-radius: var(--radius);
             text-align: center;
             padding: 3rem;
             margin: 2rem 0;
+            border: 1px solid var(--peach-soft);
         }
 
-        .cta-block h2 {
+        .cta-section h2 {
             font-size: 1.8rem;
             margin-bottom: 1rem;
+            color: var(--text-dark);
         }
 
-        .cta-block .btn-primary {
-            background: white;
-            color: var(--dark);
+        .cta-section .btn-primary {
             margin-top: 1rem;
-            display: inline-block;
-        }
-
-        .cta-block .btn-primary:hover {
-            background: var(--primary-soft);
         }
 
         /* Privacy */
-        .privacy-section {
-            background: var(--card-bg);
-            border-radius: var(--radius-lg);
+        .privacy-block {
+            background: var(--card-white);
+            border-radius: var(--radius-sm);
             padding: 2rem;
             margin: 2rem 0;
-            border: 1px solid var(--border-light);
+            border: 1px solid var(--border);
             scroll-margin-top: 80px;
         }
 
-        .privacy-section h2, .privacy-section h3 {
+        .privacy-block h2, .privacy-block h3 {
             color: var(--text-dark);
             margin-top: 1.5rem;
             margin-bottom: 0.75rem;
         }
 
-        .privacy-section h2:first-child {
+        .privacy-block h2:first-child {
             margin-top: 0;
         }
 
-        .privacy-section p, .privacy-section li {
+        .privacy-block p, .privacy-block li {
             color: var(--text-muted);
             font-size: 0.9rem;
         }
 
-        .privacy-section ul {
+        .privacy-block ul {
             padding-left: 1.2rem;
         }
 
         /* Footer */
         footer {
-            background: var(--dark);
+            background: #0f172a;
             color: #94a3b8;
             padding: 3rem 0 2rem;
             margin-top: 2rem;
@@ -442,14 +450,14 @@
         }
 
         .footer-grid a:hover {
-            color: white;
+            color: var(--peach);
         }
 
         .back-to-top {
             position: fixed;
             bottom: 2rem;
             right: 2rem;
-            background: var(--primary);
+            background: var(--peach);
             color: white;
             width: 44px;
             height: 44px;
@@ -460,11 +468,12 @@
             text-decoration: none;
             transition: 0.2s;
             z-index: 99;
-            box-shadow: var(--shadow-md);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
         }
 
         .back-to-top:hover {
-            background: var(--primary-dark);
+            background: var(--peach-dark);
+            transform: translateY(-2px);
         }
 
         @media (max-width: 768px) {
@@ -479,7 +488,7 @@
 
 <nav class="navbar">
     <div class="container nav-wrapper">
-        <div class="logo">Core<span>AI</span></div>
+        <div class="logo">Solara<span>AI</span></div>
         <div class="nav-links">
             <a href="#home">Home</a>
             <a href="#features">Features</a>
@@ -492,41 +501,41 @@
 </nav>
 
 <main>
-    <!-- Hero -->
+    <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="container hero-grid">
             <div class="hero-content">
-                <div class="hero-badge">Enterprise AI Platform</div>
-                <h1>Intelligence that powers your business</h1>
-                <p>Deploy custom LLMs, autonomous agents, and predictive analytics — all on one secure, scalable infrastructure.</p>
+                <div class="hero-badge">Enterprise AI · Agentic Platform</div>
+                <h1>Intelligence that <span class="hero-highlight">illuminates</span> your future</h1>
+                <p>Deploy custom LLMs, autonomous agents, and predictive analytics on a secure, scalable infrastructure built for modern enterprises.</p>
                 <a href="#" class="btn-primary">Start free trial →</a>
                 <div class="hero-stats">
-                    <div class="stat-item"><h3>99.9%</h3><span>Uptime SLA</span></div>
-                    <div class="stat-item"><h3>500M+</h3><span>API calls</span></div>
-                    <div class="stat-item"><h3>150+</h3><span>enterprises</span></div>
+                    <div class="stat-item"><h3>99.99%</h3><span>Uptime SLA</span></div>
+                    <div class="stat-item"><h3>6B+</h3><span>API calls</span></div>
+                    <div class="stat-item"><h3>1000+</h3><span>enterprises</span></div>
                 </div>
             </div>
             <div class="hero-image">
-                <img src="https://placehold.co/550x450/1e293b/ffffff?text=AI+Dashboard&font=inter" alt="CoreAI platform">
+                <img src="https://placehold.co/550x450/1e293b/ffffff?text=AI+Dashboard&font=inter" alt="Solara AI platform">
             </div>
         </div>
     </section>
 
-    <!-- Features -->
+    <!-- Features Section -->
     <section id="features">
         <div class="container">
             <h2 class="section-title">Built for production AI</h2>
             <p class="section-sub">Everything you need to build, deploy, and scale machine learning models</p>
             <div class="features-grid">
-                <div class="feature-card"><div class="feature-icon"><i class="fas fa-brain"></i></div><h3>LLM Fine-tuning</h3><p>Customize foundation models with your proprietary data.</p></div>
-                <div class="feature-card"><div class="feature-icon"><i class="fas fa-robot"></i></div><h3>Agent Orchestration</h3><p>Build multi-agent systems for complex workflows.</p></div>
-                <div class="feature-card"><div class="feature-icon"><i class="fas fa-chart-line"></i></div><h3>Predictive Analytics</h3><p>Forecast trends with 94% accuracy.</p></div>
-                <div class="feature-card"><div class="feature-icon"><i class="fas fa-shield-alt"></i></div><h3>Enterprise Security</h3><p>GDPR, SOC2, and end-to-end encryption.</p></div>
+                <div class="feature-card"><div class="feature-icon"><i class="fas fa-microchip"></i></div><h3>LLM Fine-tuning</h3><p>Customize foundation models with your proprietary data and domain expertise.</p></div>
+                <div class="feature-card"><div class="feature-icon"><i class="fas fa-network-wired"></i></div><h3>Agent Orchestration</h3><p>Build multi-agent systems that collaborate on complex workflows.</p></div>
+                <div class="feature-card"><div class="feature-icon"><i class="fas fa-chart-line"></i></div><h3>Predictive Analytics</h3><p>Forecast trends, detect anomalies, and optimize operations with 94% accuracy.</p></div>
+                <div class="feature-card"><div class="feature-icon"><i class="fas fa-shield-alt"></i></div><h3>Enterprise Security</h3><p>GDPR, SOC2 Type II, HIPAA-ready with end-to-end encryption.</p></div>
             </div>
         </div>
     </section>
 
-    <!-- Blog -->
+    <!-- Blog Section -->
     <section id="blog">
         <div class="container">
             <h2 class="section-title">Latest insights</h2>
@@ -537,7 +546,7 @@
                     <div class="blog-content">
                         <div class="blog-tag">Engineering</div>
                         <h3>Building reliable RAG systems at scale</h3>
-                        <p>Lessons learned from production deployments.</p>
+                        <p>Lessons learned from production deployments across 50+ enterprises.</p>
                         <div class="blog-meta">May 20, 2025 · 6 min read</div>
                     </div>
                 </div>
@@ -546,7 +555,7 @@
                     <div class="blog-content">
                         <div class="blog-tag">Research</div>
                         <h3>New benchmarks for agentic evaluation</h3>
-                        <p>How we measure real-world agent performance.</p>
+                        <p>How we measure real-world agent performance and reliability.</p>
                         <div class="blog-meta">May 15, 2025 · 8 min read</div>
                     </div>
                 </div>
@@ -554,8 +563,8 @@
                     <div class="blog-img"><i class="fas fa-lock"></i></div>
                     <div class="blog-content">
                         <div class="blog-tag">Security</div>
-                        <h3>LLM security: prompt injection & guardrails</h3>
-                        <p>Best practices for production AI systems.</p>
+                        <h3>LLM security: prompt injection and guardrails</h3>
+                        <p>Best practices for securing production AI systems.</p>
                         <div class="blog-meta">May 10, 2025 · 5 min read</div>
                     </div>
                 </div>
@@ -563,11 +572,11 @@
         </div>
     </section>
 
-    <!-- Pricing -->
+    <!-- Pricing Section -->
     <section id="pricing">
         <div class="container">
             <h2 class="section-title">Flexible plans</h2>
-            <p class="section-sub">Start free, scale as you grow</p>
+            <p class="section-sub">Start free, scale as you grow. No hidden fees.</p>
             <div class="pricing-grid">
                 <div class="pricing-card">
                     <h3>Developer</h3>
@@ -575,8 +584,9 @@
                     <p>10K API calls, community support</p>
                     <ul>
                         <li><i class="fas fa-check"></i> 10K API calls/month</li>
-                        <li><i class="fas fa-check"></i> Core models</li>
+                        <li><i class="fas fa-check"></i> Core models access</li>
                         <li><i class="fas fa-check"></i> Community support</li>
+                        <li><i class="fas fa-check"></i> Basic analytics</li>
                     </ul>
                     <a href="#" class="btn-outline" style="display: block; text-align: center;">Get started</a>
                 </div>
@@ -589,6 +599,7 @@
                         <li><i class="fas fa-check"></i> Advanced models</li>
                         <li><i class="fas fa-check"></i> Priority 24/7 support</li>
                         <li><i class="fas fa-check"></i> Custom fine-tuning</li>
+                        <li><i class="fas fa-check"></i> Advanced analytics</li>
                     </ul>
                     <a href="#" class="btn-primary" style="display: block; text-align: center;">Start trial</a>
                 </div>
@@ -598,9 +609,10 @@
                     <p>Unlimited, on-prem, dedicated support</p>
                     <ul>
                         <li><i class="fas fa-check"></i> Unlimited API calls</li>
-                        <li><i class="fas fa-check"></i> On-prem / VPC</li>
+                        <li><i class="fas fa-check"></i> On-prem / VPC deployment</li>
                         <li><i class="fas fa-check"></i> Custom SLA</li>
-                        <li><i class="fas fa-check"></i> Dedicated team</li>
+                        <li><i class="fas fa-check"></i> Dedicated support team</li>
+                        <li><i class="fas fa-check"></i> SOC2 / HIPAA compliant</li>
                     </ul>
                     <a href="#" class="btn-outline" style="display: block; text-align: center;">Contact sales</a>
                 </div>
@@ -608,58 +620,72 @@
         </div>
     </section>
 
-    <!-- CTA -->
+    <!-- CTA Section -->
     <div class="container">
-        <div class="cta-block">
+        <div class="cta-section">
             <h2>Ready to transform with AI?</h2>
-            <p style="opacity: 0.8;">Join 500+ enterprises already using CoreAI.</p>
-            <a href="#" class="btn-primary">Start free →</a>
+            <p style="opacity: 0.8;">Join 1000+ enterprises already using Solara AI.</p>
+            <a href="#" class="btn-primary">Start free trial →</a>
         </div>
     </div>
 
-    <!-- Privacy Policy -->
+    <!-- Privacy Policy Section -->
     <div class="container" id="privacy">
-        <div class="privacy-section">
-            <h2><i class="fas fa-shield-alt" style="color: var(--primary);"></i> Privacy Policy</h2>
-            <p><strong>Effective:</strong> May 2025 | CoreAI Inc.</p>
+        <div class="privacy-block">
+            <h2><i class="fas fa-shield-alt" style="color: var(--peach);"></i> Privacy Policy</h2>
+            <p><strong>Effective Date:</strong> May 2025 | <strong>Last Updated:</strong> May 21, 2025</p>
+            <p>At Solara AI ("we," "our"), your privacy is fundamental to our mission. This Privacy Policy explains how we handle your information.</p>
             
-            <h3>1. Information we collect</h3>
-            <p>We collect account data (name, email, billing info), usage data (API logs, model inputs), and optional feedback. We do not store sensitive personal data without consent.</p>
+            <h3>1. Information We Collect</h3>
+            <p><strong>Account Data:</strong> Name, email address, billing information, and account preferences. <strong>Usage Data:</strong> API request logs, model inputs/outputs metadata, and feature usage patterns. <strong>Feedback:</strong> Optional survey responses and support communications.</p>
             
-            <h3>2. How we use your data</h3>
-            <p>To operate the platform, improve performance, process payments, and ensure security. We never sell your data.</p>
+            <h3>2. How We Use Your Information</h3>
+            <p>To provide and maintain our Service, improve model accuracy and platform performance, process payments, send important updates, and comply with legal obligations. We never sell your personal data to third parties.</p>
             
-            <h3>3. Data retention</h3>
-            <p>Data retained while account is active. You may request deletion. Logs purged after 90 days.</p>
+            <h3>3. Data Retention & Security</h3>
+            <p>We retain personal data for as long as your account is active. You may delete your account at any time. Industry-standard encryption (TLS 1.3, AES-256) protects data in transit and at rest.</p>
             
-            <h3>4. Third-party sharing</h3>
-            <p>Trusted subprocessors (AWS, Stripe) under strict data protection agreements.</p>
+            <h3>4. Third-Party Services</h3>
+            <p>We use trusted partners for cloud infrastructure (AWS, Google Cloud), payment processing (Stripe), and analytics. All partners comply with GDPR/CCPA requirements.</p>
             
-            <h3>5. Your rights (GDPR/CCPA)</h3>
-            <p>Access, correction, deletion, portability. Email privacy@coreai.ai</p>
+            <h3>5. Your Privacy Rights (GDPR / CCPA)</h3>
+            <p>You have the right to access, correct, delete, or restrict processing of your data. Contact <strong>privacy@solara.ai</strong> to exercise these rights.</p>
             
-            <h3>6. Security</h3>
-            <p>AES-256 encryption, TLS 1.3, regular audits.</p>
+            <h3>6. Cookies & Tracking</h3>
+            <p>We use essential cookies for authentication. No invasive tracking. You can manage cookie preferences via your browser.</p>
             
-            <h3>7. Contact</h3>
-            <p>DPO: dpo@coreai.ai | CoreAI, 101 Tech Hub, San Francisco, CA</p>
+            <h3>7. Children's Privacy</h3>
+            <p>Our services are not directed to individuals under 16. We do not knowingly collect data from minors.</p>
+            
+            <h3>8. International Data Transfers</h3>
+            <p>Data may be processed in the US, EU, or other jurisdictions. We implement Standard Contractual Clauses (SCCs) for international transfers.</p>
+            
+            <h3>9. Changes to This Policy</h3>
+            <p>We may update this Privacy Policy periodically. Material changes will be notified via email or on our website.</p>
+            
+            <p><strong>Contact Us:</strong> Data Protection Officer at <strong>dpo@solara.ai</strong> or mail: Solara AI, 101 Tech Hub, San Francisco, CA 94105.</p>
+            <p style="margin-top: 1rem;"><i class="fas fa-check-circle" style="color: var(--peach);"></i> Solara AI — building responsible intelligence.</p>
         </div>
     </div>
 </main>
 
+<!-- Footer -->
 <footer>
     <div class="container">
         <div class="footer-grid">
-            <div><h4>CoreAI</h4><p>Enterprise AI platform</p><div style="margin-top:0.5rem;">© 2025</div></div>
-            <div><h4>Product</h4><p><a href="#features">Features</a></p><p><a href="#pricing">Pricing</a></p><p>API</p></div>
-            <div><h4>Resources</h4><p><a href="#blog">Blog</a></p><p>Docs</p><p>Support</p></div>
-            <div><h4>Legal</h4><p><a href="#privacy">Privacy</a></p><p>Terms</p><p>Security</p></div>
+            <div><h4>Solara<span style="color:#f59e0b;">AI</span></h4><p>Enterprise AI platform</p><div style="margin-top:0.5rem;">© 2025</div></div>
+            <div><h4>Product</h4><p><a href="#features">Features</a></p><p><a href="#pricing">Pricing</a></p><p>API Docs</p><p>Status</p></div>
+            <div><h4>Resources</h4><p><a href="#blog">Blog</a></p><p>Documentation</p><p>Support</p><p>Community</p></div>
+            <div><h4>Legal</h4><p><a href="#privacy">Privacy Policy</a></p><p>Terms of Service</p><p>Security</p><p>Compliance</p></div>
+        </div>
+        <div style="border-top: 1px solid #334155; padding-top: 1.5rem; text-align: center; font-size: 0.75rem;">
+            Built for the enterprise. Trusted by industry leaders.
         </div>
     </div>
 </footer>
 
 <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
-<script src="protection.js"></script>
+
 <script>
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
